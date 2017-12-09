@@ -1,28 +1,18 @@
 function signin()
 {
-  // var username = document.getElementById('username').value;
-  // var password = document.getElementById('password').value;
-  //
-  // var info = 'username='+username + '&password='+password;
-  //
-  // if (username == "" || password = "")
-  // {
-  //   alert("Please fill all fields");
-  // }
-  // else {
-  //   $.ajax({
-  //     type: "POST",
-  //     url: "signin.php",
-  //     data{
-  //       username: username,
-  //       password: password
-  //     },
-  //     cache: false,
-  //     success: function(html) {
-  //       alert(html);
-  //     }
-  //   });
-  // }
-  // return false;
-  alert();
+  $.ajax({
+   url: 'http://picasaweb.google.com/data/entry/api/user/adjoacash@gmail.com?alt=json',
+   data: {
+      format: 'json'
+   },
+   error: function() {
+      alert('dID NIT ');
+   },
+   dataType: 'jsonp',
+   success: function(data) {
+    alert('success');
+    
+   },
+   type: 'GET'
+});
 }
