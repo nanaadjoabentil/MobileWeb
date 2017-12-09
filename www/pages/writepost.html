@@ -12,11 +12,6 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 <body>
-  <!--Import jQuery before materialize.js-->
-     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
-     <script type="text/javascript" src="../js/materialize.min.js"></script>
-     <!-- Compiled and minified JavaScript -->
-
 
      <h3 id= "appheading"> Good Citizen </h3>
 
@@ -62,15 +57,19 @@
         Add a video: <br><br><br>
 
         <form action="upload.php" method="post" enctype="multipart/form-data">
-        Add a picture from gallery: <br><br>
-        <input type="file" name="image" id="image">
+        Add a picture from gallery:
+        <input type="file" name="image" id="image"><br><br>
         <button class="btn waves-effect waves-light" type="submit" name="addpic" onclick="openCamera()">Upload</button><br><br>
       </form>
-
-        Add an audio recording: <br><br><br>
-
+<br><br><br>
         <button class="btn waves-effect waves-light" type="submit" name="postit">Post It!</button><br><br>
 
       </form>
+
+      <!--Import jQuery before materialize.js-->
+         <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+         <script type="text/javascript" src="../js/materialize.min.js"></script>
+         <!-- Compiled and minified JavaScript -->
+
     </body>
     </html>
