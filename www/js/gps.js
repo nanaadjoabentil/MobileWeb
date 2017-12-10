@@ -15,8 +15,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
                   //find a way to insert into db
                   var latitude = position.coords.latitude;
                   var longitude = position.coords.longitude;
+                  print_r(longitude, latitude);
 
-                  
+
         };
 
         // onError Callback receives a PositionError object
