@@ -41,20 +41,7 @@ function openCamera(selection) {
     }, options);
 }
 
-function openCameraPreview(){
-  let options = {
-  x: 0,
-  y: 0,
-  width: window.screen.width,
-  height: window.screen.height,
-  camera: CameraPreview.CAMERA_DIRECTION.BACK,
-  toBack: false,
-  tapPhoto: true,
-  previewDrag: false
-};
 
-CameraPreview.startCamera(options);
-}
 // Once you take the picture, you can display it or do something else.
 //In this example, call the app's displayImage function from the preceding code.
 

@@ -8,30 +8,58 @@ function signup()
   var email = document.getElementById('email').value;
   var org = document.getElementById('org').value;
 
-  var info = 'fullname='+fullname+ '$age='+age + '&username='+username + '&password='+password + '&tel='+tel + '&email='+email + '&org='+org;
 
   if (fullname == "" || age == "" || username == "" || password = "" || tel == "" || email == "" || org == "")
   {
     alert("Please fill all fields");
   }
-  else {
-    $.ajax({
-      type: "POST",
-      url: "signup.php",
-      data{
-        fullname: fullname,
-        age: age,
-        username: username,
-        password: password,
-        tel: tel,
-        email: email,
-        org: org  
-      },
-      cache: false,
-      success: function(html) {
-        alert(html);
-      }
-    });
+  // else {
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "signup.php",
+  //     data{
+  //       fullname: fullname,
+  //       age: age,
+  //       username: username,
+  //       password: password,
+  //       tel: tel,
+  //       email: email,
+  //       org: org
+  //     },
+  //     cache: false,
+  //     success: function(html) {
+  //       alert(html);
+  //     }
+  //   });
+  // }
+  // return false;
+
+  var info = 'fullname='+fullname+ '&age='+age + '&username='+username + '&password='+password + '&tel='+tel + '&email='+email + '&org='+org;
+
+  $.ajax({
+   url: "http://xybdev.000webhostapp.com/nanaadjoa/signup.php?info",
+   data: {
+      fullname: fullname,
+      age: age,
+      username: username,
+      password: password,
+      tel: tel,
+      email: email,
+      org: org
+   },
+   error: function() {
+      alert('Failed');
+   },
+   dataType: 'json',
+    contentType: 'application/json',
+   success: function(data) {
+     if(data == "true")
+     {
+    alert('success');
+    window.location.href = '../pages/signin.html';
   }
-  return false;
+   },
+   type: 'GET'
+});
+}
 }

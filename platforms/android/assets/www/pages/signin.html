@@ -13,29 +13,31 @@
   </head>
 <body>
 
-
 <h3 id= "appheading"> Good Citizen </h3>
 
   <p id= "signinheading"> Sign In <br><br> <!--center this text. -->
  Welcome Back! <br><br>
 Please enter your login details in the form below  </p>
 
-<form method="post" action="" class ="col s8" id="form">
-  <div class="input-field col s12">
+<!-- <form method="post" action="" class ="col s8" id="form"> -->
+  <div class="input-field col s8">
      <input id="username" type="text" name = "username" class="validate">
      <label for="username">User Name</label>
    </div><br>
-  <div class="input-field col s12">
+  <div class="input-field col s8">
      <input id="password" type="password" name="password" class="validate">
      <label for="password">Password</label>
    </div><br><br>
     <button class="btn waves-effect waves-light" type="submit" name="signin" onclick=signin()>Sign In</button> <br><br>
-    Don't have an account? <a href="signUp.html"> Sign Up! </a> Become a good ciitizen.
- </form>
+    Don't have an account? <a href="signUp.html"> Sign Up! </a> Become a good ciitizen.<br><br>
+
+     <a href="writepost.html">Writepost</a>
+ <!-- </form> -->
 
  <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../js/materialize.min.js"></script>
+ <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+ <script type="text/javascript" src="../js/materialize.min.js"></script>
+<script type="text/javascript" src="../js/signin.js"></script>
     <!-- Compiled and minified JavaScript -->
 
 </body>
