@@ -4,22 +4,25 @@ function signin()
   var password = document.getElementById('password').value;
 
   $.ajax({
-   url: "http://xybdev.000webhostapp.com/nanaadjoa/signin.php?username="+username+"&password="+password,
+   url: "http://xybdev.000webhostapp.com/nanaadjoa/xib.php",
+   //async:false,
+    type: 'GET',
    data: {
-      format: 'json'
+      username : username,
+      password : password
    },
    error: function() {
       alert('Failed');
    },
    dataType: 'json',
-   contentType: 'application/json',
+   //contentType: 'application/json',
    success: function(data) {
-     if(data == true)
-     {
+     //if(data.status_code ===200)
+    // {
     alert('success');
     window.location.href = '../pages/landingpage.html';
-  }
-   },
-   type: 'GET'
+//  }
+   }
+
 });
 }
