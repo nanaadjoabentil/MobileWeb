@@ -90,17 +90,22 @@
 
 
            var options = {
-           x: 0,
-           y: 0,
-           width: window.screen.width,
-           height: window.screen.height,
-           camera: CameraPreview.CAMERA_DIRECTION.BACK,
-           toBack: false,
-           tapPhoto: true,
-           previewDrag: false
+             quality: 50,
+         destinationType: Camera.DestinationType.FILE_URI,
+         // In this app, dynamically set the picture source, Camera or photo gallery
+         sourceType: srcType,
+         encodingType: Camera.EncodingType.JPEG,
+         mediaType: Camera.MediaType.PICTURE,
+         allowEdit: true,
+         correctOrientation: true  //Corrects Android orientation quirks
          };
 
-         CameraPreview.startCamera(options);
+         // CameraPreview.startCamera(options);
+
+         document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.camera);
+}
          }
 
          </script>
