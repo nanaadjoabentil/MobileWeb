@@ -41,18 +41,14 @@ function openCamera(selection) {
     }, options);
 }
 
-// Once you take the picture, you can display it or do something else. In this example, call the app's displayImage function from the preceding code.
+// Once you take the picture, you can display it or do something else.
+//In this example, call the app's displayImage function from the preceding code.
 
 function displayImage(imgUri) {
 
     var elem = document.getElementById('imageFile');
     elem.src = imgUri;
 }
-
-/* To display the image on some platforms, you might need to include the main part of the URI in the Content-Security-Policy
-<meta> element in index.html. For example, on Windows 10, you can include ms-appdata: in your <meta> element. Here is an example.
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: ms-appdata: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-*/
 
 // GET A PICTURE FROM THE ALBUM
 
@@ -71,3 +67,14 @@ function openFilePicker(selection) {
 
     }, options);
 }
+
+
+init: function()
+{
+  document.getElementById('video').addEventListener('click', this.openCamera, false);
+  document.getElementById('pic').addEventListener('click', this.openCamera, false);
+};
+
+document.addEventListener('deviceready', function(){
+  init();
+}, false);
