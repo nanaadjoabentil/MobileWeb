@@ -62,9 +62,9 @@
           </form>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" id="video" name="addvid" onclick="openCameraPreview()"> Add a video: </button><br><br><br>
+        <button class="btn waves-effect waves-light" id="video" name="addvid" onclick="openCameraPreview()"> Add a video: </button><br><br><br>
 
-        <form action="upload.php" method="post" enctype="multipart/form-data">
+        <form enctype="multipart/form-data">
         Add a picture from gallery:
         <input type="file" name="image" id="image"><br><br>
         <button class="btn waves-effect waves-light" type="submit" name="addpic" >Upload</button><br><br>
