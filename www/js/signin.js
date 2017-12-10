@@ -1,17 +1,23 @@
 function signin()
 {
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
   $.ajax({
-   url: 'http://picasaweb.google.com/data/entry/api/user/adjoacash@gmail.com?alt=json',
+   url: "http://xybdev.000webhostapp.com/nanaadjoa/signin.php?username="+username+"&password="+password,
    data: {
       format: 'json'
    },
    error: function() {
-      alert('dID NIT ');
+      alert('Failed');
    },
-   dataType: 'jsonp',
+   dataType: 'json',
    success: function(data) {
+     if(data == true)
+     {
     alert('success');
-    
+    window.location.href = '../pages/landingpage.html';
+  }
    },
    type: 'GET'
 });
