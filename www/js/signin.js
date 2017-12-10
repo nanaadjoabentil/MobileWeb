@@ -12,6 +12,7 @@ function signin()
       alert('Failed');
    },
    dataType: 'json',
+   contentType: 'application/json',
    success: function(data) {
      if(data == true)
      {

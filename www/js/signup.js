@@ -44,7 +44,8 @@ function signup()
    error: function() {
       alert('Failed');
    },
-   dataType: 'jsonp',
+   dataType: 'json',
+    contentType: 'application/json',
    success: function(data) {
      if(data == "true")
      {
