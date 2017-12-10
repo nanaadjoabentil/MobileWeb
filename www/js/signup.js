@@ -34,12 +34,18 @@ function signup()
   // }
   // return false;
 
-  var info = 'fullname='+fullname+ '$age='+age + '&username='+username + '&password='+password + '&tel='+tel + '&email='+email + '&org='+org;
+  var info = 'fullname='+fullname+ '&age='+age + '&username='+username + '&password='+password + '&tel='+tel + '&email='+email + '&org='+org;
 
   $.ajax({
    url: "http://xybdev.000webhostapp.com/nanaadjoa/signup.php?info",
    data: {
-      format: 'json'
+      fullname: fullname,
+      age: age,
+      username: username,
+      password: password,
+      tel: tel,
+      email: email,
+      org: org
    },
    error: function() {
       alert('Failed');
